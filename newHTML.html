@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Practice</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">Welcome to JavaScript DOM Practice</h1>
+    
+    <p class="description">This is a paragraph with a <span class="highlight">highlighted</span> text.</p>
+    
+    <button id="change-text">Change Text</button>
+    
+    <ul id="item-list">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+    </ul>
+    
+    <input type="text" id="text-input" value="Type something here">
+
+    <script>
+        // JavaScript code can go here for practice 
+        document.body.style.backgroundColor = 'orange';
+        document.getElementById('main-heading').textContent = 'Hello, DOM';
+        document.getElementById('main-heading').style.color = 'red';
+        document.getElementById('change-text').addEventListener('click', function(){
+            document.getElementById('main-heading').textContent = 'Text Changed by Button';
+        });
+        document.getElementById('text-input').value = 'Type your text here';
+        document.querySelector('.description').classList.add('highlight');
+        document.querySelector('.description').classList.remove('highlight');
+        console.log('%cVictory', 'color: green; background: yellow');
+        
+    </script>
+    <!-- <script src="newDOM.js"></script> -->
+</body>
+</html>
